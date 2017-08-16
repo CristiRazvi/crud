@@ -1,3 +1,7 @@
+<h3>Books</h3>
+<%= button_to 'New Book', books_new_url, method: :get %>
+<br>
+<br>
 <% @books.each do |book| %>
   <%= book.title %>
   <hr>
