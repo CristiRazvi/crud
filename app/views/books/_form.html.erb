@@ -1,0 +1,22 @@
+<%= form_for @book do |form| %>
+  <table>
+    <tr>
+      <td>
+        <%= form.label :title %>
+      </td>
+      <td>
+        <%= form.text_field :title %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= form.label :body %>
+      </td>
+      <td>
+        <%= form.text_area :body %>
+      </td>
+    </tr>
+  </table>
+  <%= form.submit %>
+  <%= link_to 'Cancel', books_url, method: :get %>
+<% end %>
