@@ -3,6 +3,11 @@
 <br>
 <br>
 <% @books.each do |book| %>
-  <%= book.title %>
-  <hr>
+  <div class="book_title" style="float:left;">
+    <%= book.title %>
+  </div>
+  <div class="actions" style="float:right;">
+    <%= link_to "Show", book_url(book) %>
+  </div>
+  <hr style="clear:both;">
 <% end %>
