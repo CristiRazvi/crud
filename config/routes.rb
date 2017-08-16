@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   # get 'books', to: 'books#index' # or
   resources :books, only: [:index]
+  get 'books/new', to: 'books#new'
 
 end
