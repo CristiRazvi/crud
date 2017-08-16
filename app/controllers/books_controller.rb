@@ -35,6 +35,18 @@ class BooksController < ApplicationController
     end
   end
 
+  def destroy
+    find_book
+
+    if @book.destroy
+      flash[:notice] = "Book deleted"
+      redirect_to books_url
+    else
+      flash[:notice] = "Book could not be deleted"
+      redirect_to books_url
+    end
+  end
+
   private
 
     def find_book
